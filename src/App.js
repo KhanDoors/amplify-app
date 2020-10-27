@@ -7,6 +7,7 @@ import {
   createNote as createNoteMutation,
   deleteNote as deleteNoteMutation,
 } from "./graphql/mutations";
+import Typography from "@material-ui/core/Typography";
 
 const initialFormState = { name: "", description: "" };
 
@@ -66,7 +67,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Notes App Dev Env</h1>
+      <Typography variant="h2">My Notes App Dev Env</Typography>
       <input type="file" onChange={onChange} />
       <input
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
