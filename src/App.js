@@ -66,7 +66,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Notes App</h1>
+      <h1>My Notes App Dev Env</h1>
       <input type="file" onChange={onChange} />
       <input
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -85,11 +85,11 @@ function App() {
         {notes.map((note) => (
           <div key={note.id || note.name}>
             <h2>{note.name}</h2>
-            <p>{note.description}</p>
-            <button onClick={() => deleteNote(note)}>Delete note</button>
             {note.image && (
               <img alt="stuff" src={note.image} style={{ width: 400 }} />
             )}
+            <p>{note.description}</p>
+            <button onClick={() => deleteNote(note)}>Delete note</button>
           </div>
         ))}
       </div>
